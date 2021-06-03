@@ -7,17 +7,19 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import org.springframework.hateoas.RepresentationModel;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Table(name = "orders")
 @Entity
-public class Order {
+public class Order extends RepresentationModel {
 
 	@Id
 	@GeneratedValue
 	private Long orderid;
 	private String orderdescription;
-	
+
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JsonIgnore
 	private User user;
@@ -53,5 +55,5 @@ public class Order {
 	public String toString() {
 		return "Order [orderid=" + orderid + ", orderdescription=" + orderdescription + ", user=" + user + "]";
 	}
-	
+
 }
