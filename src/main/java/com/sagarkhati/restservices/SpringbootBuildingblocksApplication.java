@@ -9,8 +9,11 @@ import org.springframework.context.support.ResourceBundleMessageSource;
 import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver;
 
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
+
 //
 @SpringBootApplication
+
 public class SpringbootBuildingblocksApplication {
 
 	public static void main(String[] args) {
